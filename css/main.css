@@ -216,7 +216,7 @@ input {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("../img/bcg-hero.jpg");
   background-repeat: no-repeat;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-position: center;
   background-size: cover;
   height: 650px;
@@ -639,6 +639,7 @@ form#contact-form button[type="submit"]:hover {
 }
 
 @media (max-width: 768px) {
+
   .container {
     width: 95%;
     padding: 0 15px;
@@ -788,6 +789,10 @@ form#contact-form button[type="submit"]:hover {
 }
 
 @media (max-width: 480px) {
+  .hero {
+    background-attachment: scroll;
+  }
+
   .container {
     padding: 0;
     width: 100%;
