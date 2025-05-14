@@ -214,7 +214,7 @@ input {
 /*==================HERO*/
 .hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("./img/bcg-hero.jpg");
+    url("../img/bcg-hero.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
