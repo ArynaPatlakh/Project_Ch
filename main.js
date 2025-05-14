@@ -34,7 +34,7 @@ window.onload = function () {
   *Zpráva:* ${message || "Žádná zpráva"}`;
 
     const encoded = encodeURIComponent(fullMessage);
-    const url = `https://wa.me/${whatsappNumber}?text=${encoded}`;
+    const url = `https://wa.me/420723093437?text=${encoded}`;
 
     window.open(url, "_blank");
   });
