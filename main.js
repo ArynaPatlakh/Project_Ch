@@ -1,36 +1,41 @@
-document.getElementById("contact-form").addEventListener("submit", function (e) {
-    e.preventDefault();
+window.onload = function () {
+    const form = document.getElementById("contact-form");
   
-    const name = this.name.value.trim();
-    const email = this.email.value.trim();
-    const phone = this.phone.value.trim();
-    const message = this.message.value.trim();
-    const consent = this.consent.checked;
-  
-    const services = Array.from(this.querySelectorAll("input[name='services']:checked"))
-      .map(input => input.value);
-  
-    if (!name || !email || !phone || !consent || services.length === 0) {
-      alert("Please fill all required fields and select at least one service.");
+    if (!form) {
+      console.error("Form not found");
       return;
     }
   
-    // Your WhatsApp number (international format, no + or spaces)
-    const whatsappNumber = "353852013264";
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
   
-    const fullMessage = `Nová poptávka z webu:
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const phone = form.phone.value.trim();
+      const message = form.message.value.trim();
+      const consent = form.consent.checked;
+  
+      const services = Array.from(form.querySelectorAll("input[name='services']:checked"))
+        .map(input => input.value);
+  
+      if (!name || !email || !phone || !consent || services.length === 0) {
+        alert("Please fill all required fields and select at least one service.");
+        return;
+      }
+  
+      const whatsappNumber = "353852013264";
+  
+      const fullMessage = `Nová poptávka z webu:
   *Jméno:* ${name}
   *E-mail:* ${email}
   *Telefon:* ${phone}
   *Služby:* ${services.join(', ')}
   *Zpráva:* ${message || "Žádná zpráva"}`;
   
-    const encodedMessage = encodeURIComponent(fullMessage);
-    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+      const encoded = encodeURIComponent(fullMessage);
+      const url = `https://wa.me/${whatsappNumber}?text=${encoded}`;
   
-    // ✅ Redirect immediately (auto-open WhatsApp with message)
-    // window.location.href = whatsappURL;
-    window.open(url, "_blank");
-
-  });
+      window.open(url, "_blank");
+    });
+  };
   
