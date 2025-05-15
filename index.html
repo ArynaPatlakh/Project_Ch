@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -72,6 +72,8 @@
           </div>
         </section>
 
+        
+
         <section class="section-services anchor-target" id="services">
           <p class="main-desc-services">Naše služby</p>
           <h2 class="main-title-serveces">
@@ -82,9 +84,9 @@
               <a href="./pages/treatment.html" class="link-service">
                 <div class="item-cover">
                   <img
-                    src="./img/sewage.jpg"
+                    src="./img/seage-details.jpg"
                     width="360"
-                    alt=""
+                    alt="Muž čistí kanalizaci ve vaně profesionálním nářadím"
                     class="img-desc-service"
                   />
                   <h3 class="title-service">Čištění odpadů a kanalizace</h3>
@@ -103,7 +105,7 @@
                   <img
                     src="./img/jobbing.jpg"
                     width="360"
-                    alt=""
+                    alt="Muž drží vrtačku a má na opasku nářadí pro opravy"
                     class="img-desc-service"
                   />
                   <h3 class="title-service">Drobné opravy</h3>
@@ -120,9 +122,9 @@
               <a href="./pages/taps.html" class="link-service">
                 <div class="item-cover">
                   <img
-                    src="./img/tap.jpeg"
+                    src="./img/tap.jpg"
                     width="360"
-                    alt=""
+                    alt="Oprava kapajícího kohoutku mužskou rukou"
                     class="img-desc-service"
                   />
                   <h3 class="title-service">Výměna vodovodních baterií</h3>
@@ -139,9 +141,9 @@
               <a href="./pages/land.html" class="link-service">
                 <div class="item-cover">
                   <img
-                    src="./img/ground.png"
+                    src="./img/ground.jpg"
                     width="360"
-                    alt=""
+                    alt="Muž seká trávník zahradní sekačkou"
                     class="img-desc-service"
                   />
                   <h3 class="title-service">Údržba pozemku</h3>
@@ -159,7 +161,7 @@
                   <img
                     src="./img/dishwasher.jpg"
                     width="360"
-                    alt=""
+                    alt="Instalace myčky nádobí mužem"
                     class="img-desc-service"
                   />
                   <h3 class="title-service">Připojení myčky a pračky</h3>
@@ -177,7 +179,7 @@
                   <img
                     src="./img/furniture.jpg"
                     width="360"
-                    alt=""
+                    alt="Oprava nábytku, muž spravuje dřevěnou tůmbočku"
                     class="img-desc-service"
                   />
                   <h3 class="title-service">Montáž nábytku</h3>
@@ -196,7 +198,7 @@
                   <img
                     src="./img/light.jpg"
                     width="360"
-                    alt=""
+                    alt="Montáž stropního lustru mužem"
                     class="img-desc-service"
                   />
                   <h3 class="title-service">Instalace svítidel</h3>
@@ -211,9 +213,9 @@
               <a href="./pages/paint.html" class="link-service">
                 <div class="item-cover">
                   <img
-                    src="./img/painting.jpeg"
+                    src="./img/painting.jpg"
                     width="360"
-                    alt=""
+                    alt="Malování zdi rukou s profesionálním stříkacím přístrojem"
                     class="img-desc-service"
                   />
                   <h3 class="title-service">Malířské a natěračské práce</h3>
@@ -234,8 +236,8 @@
               <label>Jméno <span>*</span></label>
               <input type="text" name="name" required />
 
-              <label>Email <span>*</span></label>
-              <input type="email" name="email" required />
+              <label>Email</label>
+              <input type="email" name="email" />
 
               <label>Telefon <span>*</span></label>
               <input type="tel" name="phone" required />
@@ -291,21 +293,42 @@
                   Instalace svítidel</label
                 >
                 <label
+                  ><input
+                    type="checkbox"
+                    name="services"
+                    value="Instalace svítidel"
+                    
+                  />
+                  Připojení myčky a pračky</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    name="services"
+                    value="Instalace svítidel"
+                  />
+                  Malířské a natěračské práce</label
+                >
+
+                <label
                   ><input type="checkbox" name="services" value="Ostatní" />
                   Ostatní</label
                 >
               </div>
 
-              <label>Zpráva <span>*</span></label>
+              <label>Zpráva </label>
               <textarea name="message" class="auto-expand-textarea"></textarea>
 
               <label>
                 <input type="checkbox" name="consent" required />
-                Povoluji tomuto webu ukládat můj příspěvek, aby mohl odpovědět
-                že se ptáme.
+                <span>*</span> Povoluji tomuto webu ukládat můj příspěvek, aby mohl odpovědět
+                že se ptáme. 
               </label>
 
-              <button type="submit">Odeslat</button>
+              <div class="button-group">
+                <button type="button" id="sendWhatsApp">Odeslat přes WhatsApp</button>
+                <button type="button" id="sendSMS">Odeslat přes SMS</button>
+              </div>
             </form>
           </div>
           <div class="contact-info-box" id="contact">

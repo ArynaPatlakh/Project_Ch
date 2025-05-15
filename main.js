@@ -1,39 +1,54 @@
 window.onload = function () {
-  // WhatsApp form
   const form = document.getElementById("contact-form");
 
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
+  const whatsappBtn = document.getElementById("sendWhatsApp");
+  const smsBtn = document.getElementById("sendSMS");
 
-      const name = form.name.value.trim();
-      const email = form.email.value.trim();
-      const phone = form.phone.value.trim();
-      const message = form.message.value.trim();
-      const consent = form.consent.checked;
+  function getFormData() {
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const phone = form.phone.value.trim();
+    const message = form.message.value.trim();
+    const consent = form.consent.checked;
 
-      const services = Array.from(
-        form.querySelectorAll("input[name='services']:checked")
-      ).map((input) => input.value);
+    const services = Array.from(
+      form.querySelectorAll("input[name='services']:checked")
+    ).map((input) => input.value);
 
-      if (!name || !email || !phone || !consent || services.length === 0) {
-        alert("Vyplňte prosím všechna povinná pole a vyberte službu.");
-        return;
-      }
+    if (!name || !phone || !consent || services.length === 0) {
+      alert("Vyplňte prosím všechna povinná pole a vyberte službu.");
+      return null;
+    }
+
+    const fullMessage = `Nová poptávka z webu:
+Jméno: ${name}
+E-mail: ${email || "-"}
+Telefon: ${phone}
+Služby: ${services.join(", ")}
+Zpráva: ${message || "Žádná zpráva"}`;
+
+    return encodeURIComponent(fullMessage);
+  }
+
+  if (whatsappBtn) {
+    whatsappBtn.addEventListener("click", () => {
+      const message = getFormData();
+      if (!message) return;
 
       const whatsappNumber = "420723093437";
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+      window.open(whatsappUrl, "_blank");
+    });
+  }
 
-      const fullMessage = `Nová poptávka z webu:
-*Jméno:* ${name}
-*E-mail:* ${email}
-*Telefon:* ${phone}
-*Služby:* ${services.join(", ")}
-*Zpráva:* ${message || "Žádná zpráva"}`;
+  if (smsBtn) {
+    smsBtn.addEventListener("click", () => {
+      const message = getFormData();
+      if (!message) return;
 
-      const encoded = encodeURIComponent(fullMessage);
-      const url = `https://wa.me/${whatsappNumber}?text=${encoded}`;
-
-      window.open(url, "_blank");
+      const smsNumber = "+420723093437";
+      const smsUrl = `sms:${smsNumber}?body=${message}`;
+      window.location.href = smsUrl;
     });
   }
 
@@ -47,7 +62,7 @@ window.onload = function () {
 
   // Anchor highlight
   document.querySelectorAll(".anchor-link").forEach((link) => {
-    link.addEventListener("click", function (e) {
+    link.addEventListener("click", function () {
       const targetId = this.getAttribute("href").substring(1);
       const target = document.getElementById(targetId);
       if (target) {
@@ -61,6 +76,7 @@ window.onload = function () {
     });
   });
 
+  // Burger menu
   const burger = document.getElementById("burger");
   const sidebar = document.getElementById("mobileSidebar");
   const closeSidebar = document.getElementById("closeSidebar");

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -50,7 +50,9 @@
                 <a href="../index.html" class="nav-link anchor-link">Domov</a>
               </li>
               <li class="navigation-item">
-                <a href="#services" class="nav-link anchor-link">Služby</a>
+                <a href="../index.html#services" class="nav-link anchor-link"
+                  >Služby</a
+                >
               </li>
               <li class="navigation-item"><a href="" class="nav-link"></a></li>
             </ul>
@@ -66,8 +68,8 @@
           <img
             width="400"
             class="service-img"
-            src="../img/paint-details-page.jpg"
-            alt="tap"
+            src="../img/painting.jpg"
+            alt="Malování zdi rukou s profesionálním stříkacím přístrojem"
           />
           <div>
             <h2 class="service-title">Malířské a natěračské práce</h2>
@@ -91,8 +93,8 @@
               <label>Jméno <span>*</span></label>
               <input type="text" name="name" required />
 
-              <label>Email <span>*</span></label>
-              <input type="email" name="email" required />
+              <label>Email </label>
+              <input type="email" name="email" />
 
               <label>Telefon <span>*</span></label>
               <input type="tel" name="phone" required />
@@ -171,16 +173,21 @@
                 >
               </div>
 
-              <label>Zpráva <span>*</span></label>
+              <label>Zpráva </label>
               <textarea name="message" class="auto-expand-textarea"></textarea>
 
               <label>
                 <input type="checkbox" name="consent" required />
-                Povoluji tomuto webu ukládat můj příspěvek, aby mohl odpovědět
-                že se ptáme.
+                <span>*</span> Povoluji tomuto webu ukládat můj příspěvek, aby
+                mohl odpovědět že se ptáme.
               </label>
 
-              <button type="submit">Odeslat</button>
+              <div class="button-group">
+                <button type="button" id="sendWhatsApp">
+                  Odeslat přes WhatsApp
+                </button>
+                <button type="button" id="sendSMS">Odeslat přes SMS</button>
+              </div>
             </form>
           </div>
           <div class="contact-info-box" id="contact">

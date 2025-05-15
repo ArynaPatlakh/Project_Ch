@@ -220,13 +220,14 @@ input {
 
 /*==================HERO*/
 .hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../img/bcg-hero.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center;
   background-size: cover;
-  height: 650px;
+  background-position: center;
+  width: 100%;
+  height: 600px;
 }
 
 .hero-wrapper {
@@ -429,7 +430,7 @@ form#contact-form input[type="checkbox"] {
   margin-right: 8px;
 }
 
-form#contact-form button[type="submit"] {
+form#contact-form button[type="button"] {
   background-color: #d5b602;
   color: #f6f3ed;
   border: none;
@@ -442,8 +443,8 @@ form#contact-form button[type="submit"] {
   transition: background-color 0.3s;
 }
 
-form#contact-form button[type="submit"]:hover,
-form#contact-form button[type="submit"]:focus  {
+form#contact-form button[type="button"]:hover,
+form#contact-form button[type="button"]:focus  {
   background-color: #a38b01;
 }
 
@@ -567,6 +568,14 @@ form#contact-form button[type="submit"]:focus  {
   text-align: end;
 }
 
+.button-group {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+
 .anchor-target {
   transition: box-shadow 0.3s ease;
 }
@@ -619,6 +628,10 @@ form#contact-form button[type="submit"]:focus  {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+  }
+
+  .img-desc-service{
+    margin: 0 auto;
   }
 
   .contact-info-box {
@@ -898,5 +911,14 @@ form#contact-form button[type="submit"]:focus  {
 
   .burger {
     font-size: 24px;
+  }
+
+  .button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .button-group > button {
+    width: 100%;
   }
 }
