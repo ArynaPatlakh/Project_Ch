@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="cs">
-  
-      
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Řemeslník Pro Vás | Spolehlivé služby pro váš domov | Praha</title>
@@ -16,6 +14,9 @@
       content="řemeslník, hodinový manžel, instalatér, elektrikář, montáž nábytku, opravy domácnost, řemeslnické práce Praha, hodinový manžel Praha"
     />
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -28,20 +29,16 @@
     <header class="header">
       <div class="container">
         <div class="header-div">
-            
-            <nav class="mobile-sidebar" id="mobileSidebar">
-                <button class="close-sidebar" id="closeSidebar">&times;</button>
-                <ul class="mobile-nav">
-                    <li class="navigation-item">
-                        <a href="./index.html" class="anchor-link">Domov</a>
-                      </li>
-                  <li><a href="#services" class="anchor-link">Služby</a></li>
-                  <li><a href="#contact" class="anchor-link">Kontakt</a></li>
-                
-                </ul>
-              </nav>
-
-
+          <nav class="mobile-sidebar" id="mobileSidebar">
+            <button class="close-sidebar" id="closeSidebar">&times;</button>
+            <ul class="mobile-nav">
+              <li class="navigation-item">
+                <a href="./index.html" class="anchor-link">Domov</a>
+              </li>
+              <li><a href="#services" class="anchor-link">Služby</a></li>
+              <li><a href="#contact" class="anchor-link">Kontakt</a></li>
+            </ul>
+          </nav>
 
           <nav class="header-nav">
             <a href="./index.html" class="logo-header logo">Hodinový manžel</a>
@@ -70,11 +67,11 @@
               Máte problémy v domácnosti a nikdo vám nemůže pomoci? Zavolejte
               nám! Napište SMS nebo zprávu na WhatsApp!
             </p>
+            <div class="hero-btn-group"></div>
             <a href="#services" class="hero-btn anchor-link">Zobrazit služby</a>
+            <a href="#contact-form" class="hero-btn anchor-link">Objednat službu</a>
           </div>
         </section>
-
-        
 
         <section class="section-services anchor-target" id="services">
           <p class="main-desc-services">Naše služby</p>
@@ -86,11 +83,12 @@
               <a href="./pages/treatment.html" class="link-service">
                 <div class="item-cover">
                   <img
+                  class="img-desc-service"
                     src="./img/seage-details.jpg"
                     width="360"
                     alt="Muž čistí kanalizaci ve vaně profesionálním nářadím"
-                    class="img-desc-service"
                   />
+
                   <h2 class="title-service">Čištění odpadů a kanalizace</h2>
                   <p class="desc-service">
                     Rychlé odstranění ucpání v kanalizačních trubkách pomocí
@@ -231,7 +229,7 @@
           </ul>
         </section>
 
-        <section class="section-details anchor-target" >
+        <section class="section-details anchor-target">
           <div class="form-submit">
             <form id="contact-form">
               <h2>Jsme tu pro vás, když nás potřebujete!</h2>
@@ -299,7 +297,6 @@
                     type="checkbox"
                     name="services"
                     value="Instalace svítidel"
-                    
                   />
                   Připojení myčky a pračky</label
                 >
@@ -323,18 +320,21 @@
 
               <label>
                 <input type="checkbox" name="consent" required />
-                <span>*</span> Povoluji tomuto webu ukládat můj příspěvek, aby mohl odpovědět
-                že se ptáme. 
+                <span>*</span> Povoluji tomuto webu ukládat můj příspěvek, aby
+                mohl odpovědět že se ptáme.
               </label>
 
               <div class="button-group">
-                <button type="button" id="sendWhatsApp">Odeslat přes WhatsApp</button>
+                <button type="button" id="sendWhatsApp">
+                  Odeslat přes WhatsApp
+                </button>
                 <button type="button" id="sendSMS">Odeslat přes SMS</button>
               </div>
             </form>
           </div>
           <div class="contact-info-box" id="contact">
-            <iframe class="map"
+            <iframe
+              class="map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2565.4481395274364!2d14.42076!3d50.08804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b94f621af1df5%3A0xa90e0c7b93be5b2b!2zUHJhaGE!5e0!3m2!1scs!2scz!4v1715689878916!5m2!1scs!2scz"
               width="100%"
               height="300"
@@ -410,18 +410,34 @@
       <div class="container">
         <ul class="footer-list-contact">
           <li class="items-footer-contact">
-            <h3 class="footer-item-text">Telefon:  <a class="footer-link-item" href="tel:420123456789"
-                target="_blank">+420 123 456 789</a></h3>
+            <h3 class="footer-item-text">
+              Telefon:
+              <a
+                class="footer-link-item"
+                href="tel:420123456789"
+                target="_blank"
+                >+420 123 456 789</a
+              >
+            </h3>
           </li>
           <li class="items-footer-contact">
-            <h3 class="footer-item-text">Email:  <a class="footer-link-item" href="">info@opravy-praha.cz</a></h3>
+            <h3 class="footer-item-text">
+              Email:
+              <a class="footer-link-item" href="">info@opravy-praha.cz</a>
+            </h3>
           </li>
           <li class="items-footer-contact">
-            <h3 class="footer-item-text">Adresa: <span class="footer-link-item">Praha</span> </h3>
+            <h3 class="footer-item-text">
+              Adresa: <span class="footer-link-item">Praha</span>
+            </h3>
           </li>
         </ul>
-        <a  class="footer-contact anchor-link" href="#contact">Zůstaňte s námi v kontaktu</a>
-        <p class="footer-text">© 2025 Řemeslník Pro Vás. Všechna práva vyhrazena.</p>
+        <a class="footer-contact anchor-link" href="#contact"
+          >Zůstaňte s námi v kontaktu</a
+        >
+        <p class="footer-text">
+          © 2025 Řemeslník Pro Vás. Všechna práva vyhrazena.
+        </p>
       </div>
     </footer>
   </body>

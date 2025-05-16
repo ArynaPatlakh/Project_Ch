@@ -212,7 +212,7 @@ input {
 }
 
 .header-btn:hover,
-.header-btn:focus  {
+.header-btn:focus {
   background-color: #d5b602;
   color: #34291e;
   border: 2px solid transparent;
@@ -283,7 +283,7 @@ input {
 }
 
 .hero-btn:hover,
-.hero-btn:focus  {
+.hero-btn:focus {
   color: #e9e5e1;
   background-color: #a38b01;
 }
@@ -352,6 +352,7 @@ input {
 }
 
 .img-desc-service {
+  width: 360px;
   margin-top: 20px;
   height: 240px;
   object-fit: cover;
@@ -444,7 +445,7 @@ form#contact-form button[type="button"] {
 }
 
 form#contact-form button[type="button"]:hover,
-form#contact-form button[type="button"]:focus  {
+form#contact-form button[type="button"]:focus {
   background-color: #a38b01;
 }
 
@@ -575,7 +576,6 @@ form#contact-form button[type="button"]:focus  {
   justify-content: center;
 }
 
-
 .anchor-target {
   transition: box-shadow 0.3s ease;
 }
@@ -630,7 +630,7 @@ form#contact-form button[type="button"]:focus  {
     gap: 20px;
   }
 
-  .img-desc-service{
+  .img-desc-service {
     margin: 0 auto;
   }
 
