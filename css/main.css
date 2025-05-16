@@ -759,7 +759,7 @@ form#contact-form button[type="button"]:focus  {
     text-transform: none;
   }
   .map {
-    max-width: 100%;
+    width: 100%;
   }
 
   .contact-title {

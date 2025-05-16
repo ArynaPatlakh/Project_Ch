@@ -7,7 +7,7 @@
 .service-title {
   color: #d5b602;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .service-description {
   font-size: 20px;
@@ -17,12 +17,23 @@
   height: auto;
 }
 
+.service-subtitle{
+  margin-bottom: 10px;
+  color: #493a2c;
+
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
   .details-service {
     flex-direction: column;
     gap: 25px;
     margin-top: 40px;
     margin-bottom: 40px;
+  }
+
+  .service-subtitle{
+    font-size: 1.2rem;
+    text-align: center;
   }
 
   .service-title {
@@ -58,7 +69,12 @@
   .service-title {
     font-size: 1.2rem;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
+  }
+
+  .service-subtitle{
+    font-size: 1rem;
+    text-align: center;
   }
 
   .service-description {
@@ -89,6 +105,11 @@
     font-size: 1.1rem;
     text-align: center;
     margin-bottom: 10px;
+  }
+
+  .service-subtitle{
+    font-size: 0.9rem;
+    text-align: center;
   }
 
   .service-description {
