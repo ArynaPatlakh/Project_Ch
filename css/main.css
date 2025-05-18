@@ -267,9 +267,9 @@ input {
 }
 
 .main-desc {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-style: bold;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.25;
   letter-spacing: 0px;
   text-transform: none;
@@ -639,7 +639,7 @@ form#contact-form button[type="button"]:focus {
   }
 
   .main-desc {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
   }
 
   .hero-btn {
@@ -741,7 +741,7 @@ form#contact-form button[type="button"]:focus {
   }
 
   .main-desc {
-    font-size: 1rem;
+    font-size: 1.1rem;
     max-width: 100%;
     margin-bottom: 0;
   }
@@ -871,11 +871,10 @@ form#contact-form button[type="button"]:focus {
   }
 
   .main-desc {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .hero-wrapper {
-    /* padding-top: 80px; */
     padding-right: 10px;
 
   }
