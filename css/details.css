@@ -22,9 +22,10 @@
   font-size: 20px;
 }
 
-.service-img {
-  height: auto;
+.service-img{
+  text-align: center;
 }
+
 
 .service-subtitle {
   margin-bottom: 10px;

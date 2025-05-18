@@ -228,12 +228,7 @@ input {
 
 /*==================HERO*/
 .hero {
-  background-image: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.6)
-    ),
-    url("../img/bcg-hero.jpg");
+  background-image: url("../img/bcg-hero-2.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -242,12 +237,20 @@ input {
   height: 600px;
 }
 
+/* linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.6)
+    ), */
+
 .hero-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
   max-width: 75%;
-  padding-top: 210px;
+
+  padding-top: 95px;
+  justify-content: center;
   margin: 0 auto;
 }
 
@@ -260,6 +263,7 @@ input {
   text-transform: none;
   margin-bottom: 10px;
   color: var(--text-color--);
+ 
 }
 
 .main-desc {
@@ -270,8 +274,10 @@ input {
   letter-spacing: 0px;
   text-transform: none;
   margin-bottom: 10px;
-  color: var(--text-color--);
+  color: #fff;
   max-width: 75%;
+  text-shadow: 2px 2px 5px var(--text-color--);
+  text-align: center;
 }
 
 .hero-btn {
@@ -528,7 +534,6 @@ form#contact-form button[type="button"]:focus {
 }
 
 .contact-hours {
-  
   list-style: none;
   padding: 0;
   margin: 0;
@@ -657,6 +662,13 @@ form#contact-form button[type="button"]:focus {
     margin: 0 auto;
   }
 
+  .title-service {
+  text-align: center;
+  }
+
+  .desc-service {
+    margin: 0 auto;
+  }
   .contact-info-box {
     padding-left: 80px;
     padding-right: 80px;
@@ -709,22 +721,29 @@ form#contact-form button[type="button"]:focus {
 
   .hero {
     height: auto;
-    padding: 40px 0;
+    /* padding: 40px 0; */
+    padding-top: 50px;
+    padding-bottom: 60px;
   }
 
   .hero-wrapper {
-    padding-top: 100px;
-    margin-left: 20px;
-    max-width: 100%;
+    /* padding-top: 10px; */
+    padding-top: 0;
+    /* margin-left: 20px; */
+    max-width: 60%;
+    gap: 10px;
   }
 
   .main-title {
     font-size: 2rem;
+    margin-bottom: 0;
+    /* margin-bottom: 10px; */
   }
 
   .main-desc {
     font-size: 1rem;
     max-width: 100%;
+    margin-bottom: 0;
   }
 
   .hero-btn {
@@ -856,9 +875,9 @@ form#contact-form button[type="button"]:focus {
   }
 
   .hero-wrapper {
-    padding-top: 80px;
+    /* padding-top: 80px; */
     padding-right: 10px;
-    margin-left: 8px;
+
   }
 
   .hero-btn {
