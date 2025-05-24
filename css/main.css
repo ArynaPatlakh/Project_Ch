@@ -237,12 +237,6 @@ input {
   height: 600px;
 }
 
-/* linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.6)
-    ), */
-
 .hero-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -262,8 +256,7 @@ input {
   letter-spacing: 0px;
   text-transform: none;
   margin-bottom: 10px;
-  color: var(--text-color--);
- 
+  color: var(--secondary-color--);
 }
 
 .main-desc {
@@ -274,9 +267,9 @@ input {
   letter-spacing: 0px;
   text-transform: none;
   margin-bottom: 10px;
-  color: #fff;
+  color: black;
   max-width: 75%;
-  text-shadow: 1px 0px 10px black;
+  text-shadow: 1px 0px 10px var(--main-bcg-color);
   text-align: center;
 }
 
@@ -614,6 +607,51 @@ form#contact-form button[type="button"]:focus {
   border-radius: 8px;
 }
 
+.accordion-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+.ac {
+  border: none;
+  background-color: var(--main-bcg-color);
+  width: 47%;
+}
+.faq-section-header {
+  text-align: center;
+  color: var(--main-text-color--);
+  margin-bottom: 20px;
+}
+
+.ac > .ac-header > .ac-trigger {
+  font-family: "Poppins", sans-serif;
+
+  font-weight: bold;
+  font-size: 24px;
+  color: var(--text-color--);
+  background-color: var(--main-bcg-color);
+}
+
+.ac > .ac-header > .ac-trigger:hover,
+.ac > .ac-header > .ac-trigger:focus {
+  font-family: "Poppins", sans-serif;
+
+  color: var(--hover-color--);
+}
+.ac > .ac-panel {
+  font-family: "Poppins", sans-serif;
+
+  background-color: var(--main-bcg-color);
+  color: var(--text-color--);
+}
+
+.ac > .ac-panel > .ac-text {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+}
+
 @keyframes highlightBorder {
   0% {
     box-shadow: 0 0 0 4px var(--hover-color--);
@@ -663,7 +701,7 @@ form#contact-form button[type="button"]:focus {
   }
 
   .title-service {
-  text-align: center;
+    text-align: center;
   }
 
   .desc-service {
@@ -694,6 +732,28 @@ form#contact-form button[type="button"]:focus {
 
   .footer-text {
     text-align: center;
+  }
+
+  .accordion-container {
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+  .ac {
+    width: 47%;
+  }
+  .faq-section-header {
+    margin-bottom: 15px;
+  }
+
+  .ac > .ac-header > .ac-trigger {
+    font-family: "Poppins", sans-serif;
+
+    font-weight: normal;
+    font-size: 20px;
+  }
+
+  .ac > .ac-panel > .ac-text {
+    font-size: 16px;
   }
 }
 
@@ -851,6 +911,25 @@ form#contact-form button[type="button"]:focus {
   .burger {
     display: block;
   }
+
+
+  .accordion-container {
+    margin-bottom: 30px;
+  }
+
+
+  .faq-section-header {
+    margin-bottom: 10px;
+  }
+
+  .ac > .ac-header > .ac-trigger {
+    font-weight: normal;
+    font-size: 20px;
+  }
+
+  .ac > .ac-panel > .ac-text {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -876,7 +955,6 @@ form#contact-form button[type="button"]:focus {
 
   .hero-wrapper {
     padding-right: 10px;
-
   }
 
   .hero-btn {
@@ -961,5 +1039,29 @@ form#contact-form button[type="button"]:focus {
   }
   .button-group > button {
     width: 100%;
+  }
+
+
+  .accordion-container {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .ac{
+    width: 100%;
+
+  }
+
+  .faq-section-header {
+    margin-bottom: 10px;
+  }
+
+  .ac > .ac-header > .ac-trigger {
+    font-style: 18px;
+
+  }
+
+  .ac > .ac-panel > .ac-text {
+    font-size: 14px;
   }
 }

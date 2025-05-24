@@ -96,4 +96,9 @@ Zpráva: ${message || "Žádná zpráva"}`;
       });
     });
   }
+
+  new Accordion(".accordion-container", {
+    duration: 300,
+    showMultiple: false,
+  });
 };
